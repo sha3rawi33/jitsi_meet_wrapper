@@ -156,4 +156,12 @@ enum FeatureFlag {
   /// Flag indicating if the welcome page should be enabled.
   /// Default: disabled (false).
   isWelcomePageEnabled,
+
+  /// Flag indicating if the car_mode be enabled.
+  /// Default: disabled (false).
+  isCarModeEnabled,
+
+  /// Flag indicating if the speaker stats should be enabled.
+  /// Default: disabled (false).
+  isSpeakerStatsEnabled,
 }

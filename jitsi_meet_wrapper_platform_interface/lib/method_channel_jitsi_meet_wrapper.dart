@@ -115,9 +115,7 @@ class MethodChannelJitsiMeetWrapper extends JitsiMeetWrapperPlatformInterface {
     _eventChannelIsInitialized = true;
   }
 
-  Map<String, Object>? _toFeatureFlagStrings(
-    Map<FeatureFlag, Object?>? featureFlags,
-  ) {
+  Map<String, Object>? _toFeatureFlagStrings(Map<FeatureFlag, Object?>? featureFlags,) {
     if (featureFlags == null) return null;
     Map<String, Object> featureFlagsWithStrings = {};
     featureFlags.forEach((key, value) {
@@ -165,6 +163,10 @@ class MethodChannelJitsiMeetWrapper extends JitsiMeetWrapperPlatformInterface {
         return 'toolbox.alwaysVisible';
       case FeatureFlag.isWelcomePageEnabled:
         return 'welcomepage.enabled';
+      case FeatureFlag.isCarModeEnabled:
+        return 'car-mode.enabled';
+      case FeatureFlag.isSpeakerStatsEnabled:
+        return 'speakerstats.enabled';
       case FeatureFlag.isAudioFocusDisabled:
         return 'audio-focus.disabled';
       case FeatureFlag.isAudioMuteButtonEnabled:
